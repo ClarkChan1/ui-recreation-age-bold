@@ -78,4 +78,16 @@ html {
       }
     }
   }
+  .help-button-container {
+    width: 100%;
+    .help-button {
+      color: $title-color;
+      font-weight: bold;
+      cursor: pointer;
+      border: 1px solid rgba(175, 175, 175, 0.5);
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  }
 }

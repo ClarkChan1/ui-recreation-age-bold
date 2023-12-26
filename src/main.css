@@ -78,5 +78,17 @@ html {
 .main-container .rent-outer-container .rent-inner-container .value-row {
   padding: 0;
 }
+.main-container .help-button-container {
+  width: 100%;
+}
+.main-container .help-button-container .help-button {
+  color: rgb(30, 30, 30);
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+}
 
 /*# sourceMappingURL=main.css.map */

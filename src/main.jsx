@@ -3,11 +3,17 @@ import ReactDOM from "react-dom/client";
 import "./main.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Main />
+    <Main askedRent={39000} utilityBill={9000} taxes={3000} />
   </React.StrictMode>
 );
 
-function Main() {
+function Main({
+  askedRent = "--",
+  proposedRent = "--",
+  utilityBill = "--",
+  taxes = "--",
+  expectedMonthlyExpense = "--",
+}) {
   return (
     <div className="main-container">
       <div className="title-container">
@@ -23,7 +29,7 @@ function Main() {
             <p>Asked Rent</p>
             <img className="info-icon" src="../images/info-icon.svg" alt="" />
           </div>
-          <p>$ --</p>
+          <p>$ {askedRent}</p>
         </div>
         <div className="rent-inner-container">
           <div className="value-row">
@@ -31,29 +37,32 @@ function Main() {
               <p>Proposed Rent</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
             </div>
-            <p>$ --</p>
+            <p>$ {proposedRent}</p>
           </div>
           <div className="value-row">
             <div className="field-wrapper">
               <p>Utility Bill</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
             </div>
-            <p>$ --</p>
+            <p>$ {utilityBill}</p>
           </div>
           <div className="value-row">
             <div className="field-wrapper">
               <p>Taxes</p>
             </div>
-            <p>$ --</p>
+            <p>$ {taxes}</p>
           </div>
           <div className="separator"></div>
           <div className="value-row">
             <div className="field-wrapper">
               <p>Expected Monthly Expense</p>
             </div>
-            <p>$ --</p>
+            <p>$ {expectedMonthlyExpense}</p>
           </div>
         </div>
+      </div>
+      <div className="help-button-container">
+        <button className="help-button">Need Help?</button>
       </div>
     </div>
   );

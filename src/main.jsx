@@ -24,6 +24,9 @@ function Main({
           your monthly expense.
         </p>
       </div>
+      <div id="coin-icon">
+        <p>$</p>
+      </div>
       <div className="rent-outer-container">
         <div className="value-row">
           <div className="field-wrapper">
@@ -50,7 +53,10 @@ function Main({
                 }
               />
             </div>
-            <p>$ {proposedRent}</p>
+            <p>
+              {" "}
+              <span style={{ color: "#00994d" }}>$</span> {proposedRent}
+            </p>
           </div>
           <div className="value-row">
             <div className="field-wrapper">
@@ -76,7 +82,10 @@ function Main({
             <div className="field-wrapper">
               <p>Expected Monthly Expense</p>
             </div>
-            <p>$ {expectedMonthlyExpense}</p>
+            <p>
+              <span style={{ fontWeight: "bold" }}>$</span>{" "}
+              {expectedMonthlyExpense}
+            </p>
           </div>
         </div>
       </div>

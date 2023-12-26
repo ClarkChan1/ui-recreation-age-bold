@@ -34,9 +34,11 @@ html {
     }
   }
   .rent-outer-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: -40px;
     background: $bg-2;
     border: 1px solid rgba(200, 200, 200, 0.499);
     border-radius: 18px;
@@ -95,4 +97,17 @@ html {
       border-radius: 8px;
     }
   }
+}
+
+#coin-icon {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: $green;
 }

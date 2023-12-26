@@ -35,9 +35,11 @@ html {
   letter-spacing: 0.5px;
 }
 .main-container .rent-outer-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: -40px;
   background: rgb(241, 241, 241);
   border: 1px solid rgba(200, 200, 200, 0.499);
   border-radius: 18px;
@@ -95,6 +97,19 @@ html {
   background: white;
   padding: 10px;
   border-radius: 8px;
+}
+
+#coin-icon {
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: #00994d;
 }
 
 /*# sourceMappingURL=main.css.map */

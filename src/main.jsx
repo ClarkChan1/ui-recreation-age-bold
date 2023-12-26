@@ -17,6 +17,44 @@ function Main() {
           your monthly expense.
         </p>
       </div>
+      <div className="rent-outer-container">
+        <div className="value-row">
+          <div className="field-wrapper">
+            <p>Asked Rent</p>
+            <img className="info-icon" src="../images/info-icon.svg" alt="" />
+          </div>
+          <p>$ --</p>
+        </div>
+        <div className="rent-inner-container">
+          <div className="value-row">
+            <div className="field-wrapper">
+              <p>Proposed Rent</p>
+              <img className="info-icon" src="../images/info-icon.svg" alt="" />
+            </div>
+            <p>$ --</p>
+          </div>
+          <div className="value-row">
+            <div className="field-wrapper">
+              <p>Utility Bill</p>
+              <img className="info-icon" src="../images/info-icon.svg" alt="" />
+            </div>
+            <p>$ --</p>
+          </div>
+          <div className="value-row">
+            <div className="field-wrapper">
+              <p>Taxes</p>
+            </div>
+            <p>$ --</p>
+          </div>
+          <div className="separator"></div>
+          <div className="value-row">
+            <div className="field-wrapper">
+              <p>Expected Monthly Expense</p>
+            </div>
+            <p>$ --</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

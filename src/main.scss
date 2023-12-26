@@ -1,6 +1,7 @@
+@import "./globals.scss";
 body,
 html {
-  background: rgb(241, 241, 241);
+  background: $bg-1;
   margin: 0;
 }
 .main-container {
@@ -9,6 +10,7 @@ html {
   align-items: center;
   font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
+  gap: 20px;
   * {
     max-width: 400px;
   }
@@ -16,18 +18,64 @@ html {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    width: 100%;
     p {
       margin: 0;
     }
     .title {
       font-weight: bold;
       font-size: 20px;
-      color: rgb(30, 30, 30);
+      color: $title-color;
     }
     .description {
       font-size: 16px;
-      color: rgb(95, 95, 95);
+      color: $font-color;
       letter-spacing: 0.5px;
+    }
+  }
+  .rent-outer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: $bg-2;
+    border: 1px solid rgba(200, 200, 200, 0.499);
+    border-radius: 18px;
+    color: $font-color;
+    .value-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      padding: 10px 40px;
+      margin: 15px 0px;
+      p {
+        margin: 0;
+      }
+      .field-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .info-icon {
+          height: 18px;
+          width: 18px;
+        }
+      }
+    }
+    .rent-inner-container {
+      margin: 20px;
+      padding: 10px 20px;
+      margin-top: 0;
+      background: $bg-3;
+      border-radius: 10px;
+      border: 1px solid rgba(175, 175, 175, 0.5);
+      .separator {
+        height: 1px;
+        background: rgba(184, 184, 184, 0.607);
+      }
+      .value-row {
+        padding: 0;
+      }
     }
   }
 }

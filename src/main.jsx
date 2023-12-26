@@ -5,6 +5,8 @@ import Info from "./info";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Main askedRent={39000} utilityBill={9000} taxes={3000} />
+    <div className="background-diagonal"></div>
+    <div className="background-green"></div>
   </React.StrictMode>
 );
 

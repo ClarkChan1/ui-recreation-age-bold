@@ -58,10 +58,16 @@ html {
   display: flex;
   align-items: center;
   gap: 10px;
+  position: relative;
 }
 .main-container .rent-outer-container .value-row .field-wrapper .info-icon {
   height: 18px;
   width: 18px;
+}
+.main-container .rent-outer-container .value-row .field-wrapper .info-icon:hover + .info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .main-container .rent-outer-container .rent-inner-container {
   margin: 20px;

@@ -55,10 +55,15 @@ html {
         display: flex;
         align-items: center;
         gap: 10px;
-
+        position: relative;
         .info-icon {
           height: 18px;
           width: 18px;
+        }
+        .info-icon:hover + .info-container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
         }
       }
     }

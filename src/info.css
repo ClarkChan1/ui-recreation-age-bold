@@ -1,0 +1,29 @@
+.info-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 110%;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  width: 300px;
+}
+.info-container .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.info-container .separator {
+  height: 1px;
+  background: rgba(184, 184, 184, 0.607);
+}
+
+@media (max-width: 670px) {
+  .info-container {
+    top: 110%;
+    left: 0;
+  }
+}
+
+/*# sourceMappingURL=info.css.map */

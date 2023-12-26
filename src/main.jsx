@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
+import Info from "./info";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Main askedRent={39000} utilityBill={9000} taxes={3000} />
@@ -28,6 +29,12 @@ function Main({
           <div className="field-wrapper">
             <p>Asked Rent</p>
             <img className="info-icon" src="../images/info-icon.svg" alt="" />
+            <Info
+              infoTitle={"Asked Rent"}
+              infoText={
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              }
+            />
           </div>
           <p>$ {askedRent}</p>
         </div>
@@ -36,6 +43,12 @@ function Main({
             <div className="field-wrapper">
               <p>Proposed Rent</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
+              <Info
+                infoTitle={"Proposed Rent"}
+                infoText={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+              />
             </div>
             <p>$ {proposedRent}</p>
           </div>
@@ -43,6 +56,12 @@ function Main({
             <div className="field-wrapper">
               <p>Utility Bill</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
+              <Info
+                infoTitle={"Utility Bill"}
+                infoText={
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                }
+              />
             </div>
             <p>$ {utilityBill}</p>
           </div>

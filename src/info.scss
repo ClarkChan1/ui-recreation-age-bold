@@ -1,0 +1,28 @@
+@import "./globals.scss";
+.info-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 110%;
+  z-index: 1;
+  padding: 20px;
+  border-radius: 10px;
+  background: $bg-3;
+  border: 1px solid rgba(175, 175, 175, 0.5);
+  width: 300px;
+  .title {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .separator {
+    height: 1px;
+    background: rgba(184, 184, 184, 0.607);
+  }
+}
+
+@media (max-width: 670px) {
+  .info-container {
+    top: 110%;
+    left: 0;
+  }
+}

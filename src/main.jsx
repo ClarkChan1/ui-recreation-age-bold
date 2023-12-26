@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./main.css";
 import Info from "./info";
+import formatNumber from "../utils/formatNumber";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Main askedRent={39000} utilityBill={9000} taxes={3000} />
@@ -41,7 +42,10 @@ function Main({
               }
             />
           </div>
-          <p>$ {askedRent}</p>
+          <p>
+            <span style={{ color: "#949494" }}>$</span>{" "}
+            {askedRent == "--" ? askedRent : formatNumber(askedRent)}
+          </p>
         </div>
         <div className="rent-inner-container">
           <div className="value-row">
@@ -57,7 +61,8 @@ function Main({
             </div>
             <p>
               {" "}
-              <span style={{ color: "#00994d" }}>$</span> {proposedRent}
+              <span style={{ color: "#00994d" }}>$</span>{" "}
+              {proposedRent == "--" ? proposedRent : formatNumber(proposedRent)}
             </p>
           </div>
           <div className="value-row">
@@ -71,13 +76,19 @@ function Main({
                 }
               />
             </div>
-            <p>$ {utilityBill}</p>
+            <p>
+              <span style={{ color: "#949494" }}>$</span>{" "}
+              {utilityBill == "--" ? utilityBill : formatNumber(utilityBill)}
+            </p>
           </div>
           <div className="value-row">
             <div className="field-wrapper">
               <p>Taxes</p>
             </div>
-            <p>$ {taxes}</p>
+            <p>
+              <span style={{ color: "#949494" }}>$</span>{" "}
+              {taxes == "--" ? taxes : formatNumber(taxes)}
+            </p>
           </div>
           <div className="separator"></div>
           <div className="value-row">
@@ -86,7 +97,9 @@ function Main({
             </div>
             <p>
               <span style={{ fontWeight: "bold" }}>$</span>{" "}
-              {expectedMonthlyExpense}
+              {expectedMonthlyExpense == "--"
+                ? expectedMonthlyExpense
+                : formatNumber(expectedMonthlyExpense)}
             </p>
           </div>
         </div>

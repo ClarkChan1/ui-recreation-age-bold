@@ -6,8 +6,8 @@ import formatNumber from "../utils/formatNumber";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Main askedRent={39000} utilityBill={9000} taxes={3000} />
-    <div className="background-diagonal"></div>
-    <div className="background-green"></div>
+    <aside className="background-diagonal"></aside>
+    <aside className="background-green"></aside>
   </React.StrictMode>
 );
 
@@ -19,19 +19,19 @@ function Main({
   expectedMonthlyExpense = "--",
 }) {
   return (
-    <div className="main-container">
-      <div className="title-container">
+    <main className="main-container">
+      <header className="title-container">
         <p className="title">Rent Breakdown</p>
         <p className="description">
           Based on your proposal, you can see what you'll be able to expect as
           your monthly expense.
         </p>
-      </div>
-      <div id="coin-icon">
+      </header>
+      <aside id="coin-icon">
         <p>$</p>
-      </div>
-      <div className="rent-outer-container">
-        <div className="value-row">
+      </aside>
+      <section className="rent-outer-container">
+        <article className="value-row">
           <div className="field-wrapper">
             <p>Asked Rent</p>
             <img className="info-icon" src="../images/info-icon.svg" alt="" />
@@ -46,9 +46,9 @@ function Main({
             <span style={{ color: "#949494" }}>$</span>{" "}
             {askedRent == "--" ? askedRent : formatNumber(askedRent)}
           </p>
-        </div>
-        <div className="rent-inner-container">
-          <div className="value-row">
+        </article>
+        <section className="rent-inner-container">
+          <article className="value-row">
             <div className="field-wrapper">
               <p>Proposed Rent</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
@@ -64,8 +64,8 @@ function Main({
               <span style={{ color: "#00994d" }}>$</span>{" "}
               {proposedRent == "--" ? proposedRent : formatNumber(proposedRent)}
             </p>
-          </div>
-          <div className="value-row">
+          </article>
+          <article className="value-row">
             <div className="field-wrapper">
               <p>Utility Bill</p>
               <img className="info-icon" src="../images/info-icon.svg" alt="" />
@@ -80,8 +80,8 @@ function Main({
               <span style={{ color: "#949494" }}>$</span>{" "}
               {utilityBill == "--" ? utilityBill : formatNumber(utilityBill)}
             </p>
-          </div>
-          <div className="value-row">
+          </article>
+          <article className="value-row">
             <div className="field-wrapper">
               <p>Taxes</p>
             </div>
@@ -89,9 +89,9 @@ function Main({
               <span style={{ color: "#949494" }}>$</span>{" "}
               {taxes == "--" ? taxes : formatNumber(taxes)}
             </p>
-          </div>
+          </article>
           <div className="separator"></div>
-          <div className="value-row">
+          <article className="value-row">
             <div className="field-wrapper">
               <p>Expected Monthly Expense</p>
             </div>
@@ -101,12 +101,12 @@ function Main({
                 ? expectedMonthlyExpense
                 : formatNumber(expectedMonthlyExpense)}
             </p>
-          </div>
-        </div>
-      </div>
-      <div className="help-button-container">
+          </article>
+        </section>
+      </section>
+      <article className="help-button-container">
         <button className="help-button">Need Help?</button>
-      </div>
-    </div>
+      </article>
+    </main>
   );
 }
